@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CoverVideo from "../components/CoverVideo";
 import Logo from "../components/Logo";
+import NavBar from "../components/NavBar";
 
 
 const Section = styled.section`
@@ -15,7 +16,7 @@ const Home = () => {
         <Section>
             <CoverVideo />
             <Logo />
-            <h1>NavBar</h1>
+            <NavBar />
         </Section>
     );
 };
