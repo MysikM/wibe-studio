@@ -42,6 +42,10 @@ const LogoContainer = styled.div`
 const FooterComponent = styled(motion.footer)`
   width: 80vw;
 
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
+
   ul {
     list-style-type: none;
     display: flex;
