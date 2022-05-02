@@ -151,7 +151,7 @@ const NewArrival = () => {
     },[])
 
     return (
-        <Section ref={ref}>
+        <Section ref={ref} id='new-arrivel'>
             <Overlay />
             <Title data-scroll data-scroll-speed='-2' data-scroll-direction='horizontal'>
                 New Arrivals
