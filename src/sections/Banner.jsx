@@ -10,6 +10,10 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+  
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 `;
 
 const Container = styled.div`
@@ -19,6 +23,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 64em) {
+    justify-content: center;
+  }
 `;
 
 const BannerComponent = styled.h1`
@@ -28,6 +36,20 @@ const BannerComponent = styled.h1`
   white-space: nowrap;
   text-transform: uppercase;
   line-height: 1;
+
+  @media (max-width: 70em) {
+    font-size: ${props => props.theme.fontxxxl};
+  }
+  @media (max-width: 64em) {
+    margin: 1rem 0;
+  }
+  @media (max-width: 48em) {
+    margin: 0.5rem 0;
+    font-size: ${props => props.theme.fontlg};
+  }
+  @media (max-width: 30em) {
+    font-size: ${props => props.theme.fontmd};
+  }
   
   span{
     display: block;
