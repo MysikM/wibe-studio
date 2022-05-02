@@ -105,7 +105,8 @@ const Right = styled.div`
     justify-content: center;
     align-items: center;
     img{
-      object-fit: contain;
+      height: 100vh;
+      object-fit: cover;
     }
     .small-img-1 {
       width: 30%;
