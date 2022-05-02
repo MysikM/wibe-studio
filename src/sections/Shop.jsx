@@ -13,8 +13,6 @@ import img7 from '../assets/Images/7.webp';
 import img8 from '../assets/Images/8.webp';
 import img9 from '../assets/Images/9.webp';
 import img10 from '../assets/Images/10.webp';
-import img11 from '../assets/Images/11.webp';
-import img12 from '../assets/Images/12.webp';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -141,7 +139,7 @@ const Shop = () => {
                     scroller: '.App',
                     scrub: true,
                     pin: true,
-                    markers: true,
+                    // markers: true,
                 },
 
                 height: `${scrollingElement.scrollWidth}px`,
@@ -155,7 +153,7 @@ const Shop = () => {
                     end: pinWrapWidth,
                     scroller: '.App',
                     scrub: true,
-                    markers: true,
+                    // markers: true,
                 },
 
                 x: -pinWrapWidth,
@@ -165,9 +163,10 @@ const Shop = () => {
             ScrollTrigger.refresh();
         }, 1000)
         return () => {
-
+            t1.kill();
+            ScrollTrigger.kill();
         };
-    },[])
+    },[]);
     return (
         <Section ref={ref}>
             <Title data-scroll data-scroll-speed='-1'>
