@@ -13,6 +13,10 @@ const NavContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  
+  @media (max-width: 40em){
+    top: ${props => props.click ? '0' : `calc(-50vh - 4rem)`};
+  }
 `;
 
 const MenuBtn = styled.li`
@@ -37,6 +41,11 @@ const MenuBtn = styled.li`
   text-transform: uppercase;
   
   cursor: pointer;
+
+  @media (max-width: 40em){
+    width: 10rem;
+    height: 2rem;
+  }
 `;
 
 const MenuItems = styled(motion.ul)`
@@ -53,11 +62,22 @@ const MenuItems = styled(motion.ul)`
   width: 100%;
   padding: 0 10rem;
   cursor: pointer;
+
+  @media (max-width: 40em){
+    flex-direction: column;
+    padding: 2rem 0;
+    height: 50vh;
+  }
 `;
 
 const MenuItem = styled(motion.li)`
   text-transform: uppercase;
   color: ${props => props.theme.text};
+
+  @media (max-width: 40em){
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
 `;
 
 const NavBar = () => {
@@ -90,7 +110,7 @@ const NavBar = () => {
         >
             <MenuItems
                 drag='y'
-                gragConstraints={{
+                dragConstraints={{
                     top:0,
                     bottom: 70,
                 }}
