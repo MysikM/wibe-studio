@@ -63,7 +63,7 @@ const Title = styled(motion.div)`
 const container = {
     hidden: {opacity: 0} ,
     show:{opacity: 1,
-        transition:{delayChildren: 2, staggerChildren: 0.3},
+        transition:{delayChildren: 5, staggerChildren: 0.3},
     }
 }
 
